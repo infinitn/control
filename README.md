@@ -2,6 +2,15 @@
 
 > 模拟后台管理
 
+###技术栈
+
+1. [vue → https://cn.vuejs.org/](https://cn.vuejs.org/)
+2. [vue-router → https://router.vuejs.org/](https://router.vuejs.org/)
+3. [vuex → https://vuex.vuejs.org/](https://vuex.vuejs.org/)
+4. []
+
+
+
 ## Build Setup
 
 ``` bash
