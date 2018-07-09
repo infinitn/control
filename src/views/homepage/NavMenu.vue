@@ -1,6 +1,15 @@
 <template>
-  <div>
-    <el-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect">
+  <div class="body-menu">
+    <el-menu 
+      :default-active="activeIndex" 
+      mode="horizontal" 
+      @select="handleSelect" 
+      menu-trigger="click" 
+      unique-opened
+      background-color="#545c64"
+      text-color="#fff"
+      active-text-color="#ffd04b"
+      >
       <el-submenu v-for="(item,index) in list" :key="index" :index="item.index">
         <template slot="title">{{item.name}}</template>
         <el-menu-item v-for="(child,idx) in item.children" :key="idx" :index="child.path">
@@ -14,12 +23,16 @@
 export default {
   data () {
     return {
-      activeIndex: '1',
+      activeIndex: 'ELementUi',
       list:[
         {
           name: '依赖管理',
-          index: '1',
+          index: 'NpmInstall',
           children: [
+            {
+              name: 'element-ui',
+              path: 'ELementUi'
+            },
             {
               name: 'scss',
               path: 'Scss'
@@ -28,15 +41,30 @@ export default {
         },
         {
           name: 'Vue',
-          index: '2',
+          index: 'Vue',
           children: [
             {
-              name: 'vue-vuex',
-              path: 'VueVuex'
+              name: 'vuex',
+              path: 'Vuex'
             },
             {
               name: 'vue-router',
               path: 'VueRouter'
+            }
+          ]
+        },
+
+        {
+          name: '开发文档',
+          index: 'Document',
+          children: [
+            {
+              name: '开发指引',
+              path: 'DevelopGuidance'
+            },
+            {
+              name: '开发规范',
+              path: 'DevelopStandard'
             }
           ]
         }
@@ -45,7 +73,7 @@ export default {
   },
   methods: {
     handleSelect(key, keyPath) {
-      console.log(key, keyPath)
+      this.$router.push({name: key})
     }
   },
   created () {

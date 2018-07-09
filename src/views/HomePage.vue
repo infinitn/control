@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <nav-menu></nav-menu>
+  <div class="body">
+    <div class="nav">
+      <nav-menu class="menu"></nav-menu>
+    </div>
     <router-view></router-view>
   </div>
 </template>
@@ -24,5 +26,13 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
+.body{
+  padding-top: 65px;
+}
+.nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 </style>

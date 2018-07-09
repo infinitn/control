@@ -1,6 +1,6 @@
 <template>
   <div>
-    npm-install
+    <router-view></router-view>
   </div>
 </template>
 <script>
