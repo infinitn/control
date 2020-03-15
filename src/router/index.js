@@ -57,6 +57,18 @@ export default new Router({
               component: resolve => require(['../views/homepage/document/DevelopStandard'],resolve)
             }
           ]
+        },
+        {
+          path: 'Plugins',
+          name: 'Plugins',
+          component: resolve => require(['../views/homepage/Plugins'], resolve),
+          children: [
+            {
+              path: 'Mp3Recording',
+              name: 'Mp3Recording',
+              component: resolve => require(['../views/homepage/plugins/Mp3Recording'], resolve)
+            }
+          ]
         }
       ]
     }

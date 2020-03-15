@@ -1,10 +1,10 @@
 <template>
   <div class="body-menu">
-    <el-menu 
-      :default-active="activeIndex" 
-      mode="horizontal" 
-      @select="handleSelect" 
-      menu-trigger="click" 
+    <el-menu
+      :default-active="activeIndex"
+      mode="horizontal"
+      @select="handleSelect"
+      menu-trigger="click"
       unique-opened
       background-color="#545c64"
       text-color="#fff"
@@ -67,6 +67,17 @@ export default {
               path: 'DevelopStandard'
             }
           ]
+        },
+        {
+          name: '插件',
+          index: 'Plugins',
+          children: [
+            {
+              name: 'mp3录音',
+              path: 'Mp3Recording'
+            }
+          ]
+
         }
       ]
     }
@@ -77,7 +88,7 @@ export default {
     }
   },
   created () {
-    
+
   }
 };
 </script>

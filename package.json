@@ -10,8 +10,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "element-ui": "^2.3.9",
+    "element-ui": "^2.13.0",
     "mint-ui": "^2.2.13",
+    "mp3-mediarecorder": "^3.4.7",
     "vue": "^2.5.2",
     "vue-lazyload": "^1.2.3",
     "vue-router": "^3.0.1"
